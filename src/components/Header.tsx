@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Menu, X, Phone, Calendar } from 'lucide-react';
 
 export default function Header() {
@@ -23,14 +22,22 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Brand Logo with Transparent Emblem + Typography */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-2.5 group">
               <img
                 src="/images/file_1310693148.png"
-                alt="사람과성장 코칭심리상담센터"
-                className="h-10 md:h-12 w-auto object-contain"
+                alt="사람과성장 심볼"
+                className="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105"
               />
+              <div className="flex flex-col justify-center">
+                <span className="text-base sm:text-lg md:text-xl font-bold text-gray-900 tracking-tight leading-none group-hover:text-brand-orange transition-colors">
+                  사람과성장
+                </span>
+                <span className="text-[10px] sm:text-[11px] text-gray-500 font-medium tracking-normal mt-0.5">
+                  코칭심리상담센터
+                </span>
+              </div>
             </Link>
           </div>
 
@@ -68,7 +75,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex lg:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-1">
             <a
               href="tel:02-566-8291"
               className="p-2 text-brand-orange"
