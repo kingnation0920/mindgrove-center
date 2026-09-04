@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #mapDiv {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mapDiv"></div>
+      
+    <script nonce="zsE8nzV58w-W187LG6dmvw">
+      function onEmbedLoad() {
+        initEmbed([null,null,null,null,null,[[[2,"spotlit",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,null,11,null,[null,null,null,null,null,null,null,null,null,null,null,null,null,1]]]],null,null,[[null,null,null,null,null,null,null,null,null,null,null,null,null,[[["3854132746749795963","14915109439267511378"],"/g/11bz80hscf",null,[374918902,1270309525],null,null,null,1,null,null,null,null,null,null,"gcid:geocoded_address"],0,0,null,null,0,null,0]]]],null,["ko","kr"],[null,null,null,"/maps/api/js/ApplicationService.GetEntityDetails","/maps/embed/upgrade204",null,"/maps/embed/record204"],null,null,null,null,null,null,null,null,"GY2aasSzBram2roPu6LzaA",null,null,null,[[[3165.679446741482,127.0309525,37.4918902],[0,0,0],null,13.10000038146973],null,0,[["0x357ca1502738de7b:0xcefd1d02e99d9c52","서울특별시 강남구 강남대로 320",[37.4918902,127.0309525]],"서울특별시 강남구 강남대로 320",null,null,null,null,null,null,null,null,null,null,null,"서울특별시 강남구 강남대로 320",null,null,null,null,null,null,null,null,null,null,1,null,null,"ChIJe944J1ChfDURUpyd6QId_c4",null,null,"0ahUKEwiEpPGbzNSWAxU2k1YBHTvRHA0Q8BcIAigA",null,null,null,null,null,null,null,["0ahUKEwiEpPGbzNSWAxU2k1YBHTvRHA0QqtMBCAcoBA",["8Q99F2RJ+Q9"],["F2RJ+Q9 서울특별시"],2]]],null,null,null,0,null,null,null,null,null,null,[1]]);
+      }
+      function onApiLoad() {
+        var embed = document.createElement('script');
+        embed.src = "https://maps.gstatic.com/maps-api-v3/embed/js/66/3d/intl/ko_ALL/init_embed.js";
+        document.body.appendChild(embed);
+      }
+    </script>
+    <link rel="preload" href="https://maps.gstatic.com/maps-api-v3/embed/js/66/3d/intl/ko_ALL/init_embed.js" nonce="zsE8nzV58w-W187LG6dmvw" as="script" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&amp;paint_origin=&amp;libraries=geometry,search&amp;v=weekly&amp;loading=async&amp;language=ko&amp;region=kr&amp;experimentation=allowed&amp;callback=onApiLoad" nonce="zsE8nzV58w-W187LG6dmvw" async defer></script>
+  </body>
+</html>

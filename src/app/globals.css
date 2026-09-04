@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #222222;
+  }
+}
+
+/* Froala / Raw HTML renderer styles for preserved board contents */
+.board_contents, .page_block_content {
+  line-height: 1.8;
+  color: #333333;
+  font-size: 16px;
+  word-break: keep-all;
+}
+
+.board_contents p, .page_block_content p {
+  margin-bottom: 0.8rem;
+}
+
+.board_contents img, .page_block_content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+.board_contents a, .page_block_content a {
+  color: #fe5e29;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.board_contents h1, .board_contents h2, .board_contents h3 {
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #111111;
+}

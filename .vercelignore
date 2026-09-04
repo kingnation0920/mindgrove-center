@@ -1,0 +1,8 @@
+node_modules
+.next
+backup_data
+scratch
+print_*.js
+extract_all.js
+sync_assets.js
+.git
