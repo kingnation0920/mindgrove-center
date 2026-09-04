@@ -440,7 +440,7 @@ export default function AboutPage() {
               문의전화 02-566-8291
             </a>
             <a
-              href="https://booking.naver.com"
+              href="https://naver.me/GSQTsIoF"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-brand-orange text-white rounded-full font-semibold hover:bg-[#e04f1c] transition-colors shadow-sm"

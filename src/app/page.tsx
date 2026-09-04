@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, MapPin, Phone, Mail, Clock, ShieldCheck, Heart, Sparkles, Building, BookOpen } from 'lucide-react';
+import { ArrowRight, MapPin, Phone, Mail, Clock, ShieldCheck, Heart, Sparkles, Building, BookOpen, Calendar } from 'lucide-react';
 import postsData from '@/data/posts.json';
 
 export default function HomePage() {
@@ -337,19 +337,20 @@ export default function HomePage() {
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <a
-                  href="tel:02-566-8291"
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 bg-brand-orange text-white text-sm font-semibold rounded-lg hover:bg-[#e04f1c] transition-colors shadow-sm"
-                >
-                  <Phone className="w-4 h-4" />
-                  전화 상담 예약
-                </a>
-                <a
-                  href="https://map.naver.com"
+                  href="https://talk.naver.com/ct/wkeai2e?frm=mnmb&frm=nmb_detail#nafullscreen"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 bg-brand-orange text-white text-sm font-semibold rounded-lg hover:bg-[#e04f1c] transition-colors shadow-sm"
+                >
+                  <Calendar className="w-4 h-4" />
+                  상담예약
+                </a>
+                <a
+                  href="tel:02-566-8291"
                   className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 border border-gray-300 text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
                 >
-                  네이버 지도 길찾기
+                  <Phone className="w-4 h-4 text-brand-orange" />
+                  전화 문의: 02-566-8291
                 </a>
               </div>
             </div>

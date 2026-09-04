@@ -64,7 +64,7 @@ export default function Header() {
               02-566-8291
             </a>
             <a
-              href="https://booking.naver.com"
+              href="https://talk.naver.com/ct/wkeai2e?frm=mnmb&frm=nmb_detail#nafullscreen"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-orange hover:bg-[#e04f1c] text-white px-4 py-2 rounded-full text-sm font-medium transition-colors shadow-sm flex items-center gap-1.5"
@@ -117,13 +117,13 @@ export default function Header() {
               상담 문의: 02-566-8291
             </a>
             <a
-              href="https://booking.naver.com"
+              href="https://talk.naver.com/ct/wkeai2e?frm=mnmb&frm=nmb_detail#nafullscreen"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-3 bg-brand-orange text-white rounded-lg text-sm font-semibold shadow-sm"
             >
               <Calendar className="w-4 h-4" />
-              네이버 예약 바로가기
+              상담예약 (네이버 톡톡)
             </a>
           </div>
         </div>

@@ -159,7 +159,9 @@ export default function ConsultingPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:02-566-8291"
+              href="https://talk.naver.com/ct/wkeai2e?frm=mnmb&frm=nmb_detail#nafullscreen"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 bg-brand-orange text-white rounded-full font-semibold hover:bg-[#e04f1c] transition-colors shadow-sm"
             >
               컨설팅 상담 신청
