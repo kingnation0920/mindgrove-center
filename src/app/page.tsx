@@ -337,7 +337,7 @@ export default function HomePage() {
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://talk.naver.com/ct/wkeai2e?frm=mnmb&frm=nmb_detail#nafullscreen"
+                  href="https://naver.me/GSQTsIoF"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 bg-brand-orange text-white text-sm font-semibold rounded-lg hover:bg-[#e04f1c] transition-colors shadow-sm"
