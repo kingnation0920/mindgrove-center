@@ -1,112 +1,186 @@
 import React from 'react';
 import Link from 'next/link';
-import { Target, Compass, Zap, Trophy, Phone, ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: '성장코칭 | 사람과성장 코칭심리상담센터',
-  description: '커리어 전환, 리더십 코칭, 라이프 코칭. 내면의 잠재력을 깨워 실질적인 삶의 변화와 성취를 이끄는 1:1 파트너십.',
+  description: '성장은 속도가 아니라 방향의 문제입니다. 당신의 잠재력을 깨워 진짜 성취로 바꾸는 실전형 파트너, 사람과성장 성장코칭.',
 };
 
 export default function CoachingPage() {
   const targets = [
-    '치유를 넘어 이제는 실질적인 삶의 변화와 성취를 만들고 싶은 분',
-    '자신의 고유한 잠재력과 강점을 발견하고 주도적인 삶의 지도를 그리고 싶은 분',
-    '이직, 전직, 창업 등 커리어의 중요한 전환점에서 명확한 방향키가 필요한 분',
-    '전문적인 피드백과 코칭을 통해 지속 가능한 동기부여와 성장을 이어가고 싶은 분',
+    {
+      image: '/images/364243475.png',
+      text: '치유되어 이제는 실질적인 삶의 변화와 성취를 만들고 싶은 분',
+    },
+    {
+      image: '/images/451437600.png',
+      text: '자신의 잠재력을 발견하고 주도적인 삶의 지도를 그리고 싶은 분',
+    },
+    {
+      image: '/images/589102637.png',
+      text: '전문적인 피드백을 통해 멈추지 않는 성장을 지속하고 싶은 분',
+    },
+    {
+      image: '/images/676808762.png',
+      text: '내면의 확신을 현실의 구체적인 성과로 연결하고자 하는 분',
+    },
   ];
 
-  const steps = [
-    { step: '01', title: '발견', desc: '기질/강점 검사 및 초기 진단을 통해 진짜 원하는 목표와 내면의 장벽을 규명합니다.' },
-    { step: '02', title: '계획', desc: '목표 달성을 위한 맞춤형 실행 전략을 수립하고 구체적인 세션 로드맵을 확정합니다.' },
-    { step: '03', title: '도전', desc: '실행 과정에서의 시행착오를 점검하고 피드백을 통해 막힘 없는 성장의 흐름을 만듭니다.' },
-    { step: '04', title: '결실', desc: '구체적인 성과를 내재화하고 앞으로도 스스로 나아갈 수 있는 지속 가능성을 완성합니다.' },
+  const processes = [
+    {
+      step: '01',
+      title: '발견',
+      desc: '검사 및 초기 코칭 진단',
+      image: '/images/file_153470076.png',
+    },
+    {
+      step: '02',
+      title: '계획',
+      desc: '코칭 횟수 및 세션 일정 조율, 목표설정, 계약금 입금',
+      image: '/images/file_1775914433.png',
+    },
+    {
+      step: '03',
+      title: '도전',
+      desc: '과감한 실행과 시행착오 점검, 방향에 맞는 성장',
+      image: '/images/file_1234105122.png',
+    },
+    {
+      step: '04',
+      title: '결실',
+      desc: '구체적 성과와 지속 가능성 공유.',
+      image: '/images/file_709064839.png',
+    },
   ];
 
   return (
-    <div className="bg-white">
-      {/* Banner */}
-      <section className="bg-gradient-to-b from-[#fcfbfa] to-white border-b border-gray-150 py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <span className="text-xs font-bold text-brand-orange uppercase tracking-widest">
-            GROWTH COACHING
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-3 font-serif">
-            성장코칭
-          </h1>
-          <p className="text-gray-500 text-sm sm:text-base mt-4 max-w-2xl mx-auto leading-relaxed">
-            Empowerment: 성장은 속도가 아니라 방향의 문제입니다. 삶의 비전을 세우고 주도적으로 뻗어나가는 여정
-          </p>
+    <div className="bg-white text-[#222222]">
+      {/* 1. Header Section */}
+      <section className="pt-20 pb-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#222222]">
+          성장코칭
+        </h1>
+        <p className="mt-4 text-base sm:text-lg text-[#222222] font-normal">
+          Empowerment: 삶의 비전을 세우고 힘차게 뻗기
+        </p>
+      </section>
+
+      {/* 2. Main Circular Image */}
+      <section className="py-6 flex justify-center">
+        <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-sm border border-gray-150">
+          <img
+            src="/images/file_695295771.png"
+            alt="성장코칭 대표 이미지"
+            className="w-full h-full object-cover"
+          />
         </div>
       </section>
 
-      <section className="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        {/* Quote */}
-        <div className="bg-orange-50/50 border border-orange-200/60 rounded-2xl p-8 sm:p-10 text-center max-w-3xl mx-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-            "잠재력을 깨워 진짜 성취로 바꾸는 실전형 파트너"
-          </h2>
-          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-            사람과성장은 단순한 멘토링이 아닌, 당신이 가진 무한한 힘을 스스로 발견하고 실행하도록 돕는 전문 코칭 파트너입니다. 가장 최적화된 성장의 길을 함께 엽니다.
-          </p>
-        </div>
+      {/* 3. Core Text */}
+      <section className="py-8 max-w-3xl mx-auto px-4 text-center space-y-2 text-base sm:text-lg text-[#222222] font-normal leading-relaxed">
+        <p className="font-medium text-xl text-gray-900">
+          성장은 속도가 아니라 방향의 문제입니다.
+        </p>
+        <p>
+          사람과성장은 당신의 잠재력을 깨워 진짜 성취로 바꾸는 실전형 파트너입니다.
+        </p>
+        <p>
+          당신이 가진 무한한 힘을 스스로 발견하고 실행하도록, 가장 최적화된 성장의 길을 함께 만듭니다.
+        </p>
+      </section>
 
-        {/* Target Audience */}
-        <div className="space-y-6">
-          <div className="text-center">
-            <span className="text-xs font-bold text-brand-orange uppercase">WHO IS THIS FOR</span>
-            <h3 className="text-2xl font-bold text-gray-900 mt-1">이런 분들께 권해드립니다</h3>
-          </div>
+      {/* Divider */}
+      <div className="flex justify-center py-6">
+        <div className="w-[1px] h-14 bg-[#bbbbbb]"></div>
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {targets.map((text, idx) => (
-              <div key={idx} className="flex items-start gap-3.5 p-5 bg-[#fcfbfa] border border-gray-200/80 rounded-xl">
-                <Target className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
-                <span className="text-sm text-gray-700 font-medium leading-relaxed">{text}</span>
+      {/* 4. Target Audience Cards */}
+      <section className="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {targets.map((tgt, idx) => (
+            <div
+              key={idx}
+              className="bg-[#faf9f8] p-8 rounded-2xl border border-gray-150 flex flex-col items-center text-center hover:shadow-md transition-shadow"
+            >
+              <div className="w-24 h-24 mb-6 flex items-center justify-center">
+                <img
+                  src={tgt.image}
+                  alt={`대상 ${idx + 1}`}
+                  className="w-20 h-20 object-contain"
+                />
               </div>
-            ))}
-          </div>
+              <p className="text-[15px] font-medium text-[#222222] leading-relaxed text-left sm:text-center">
+                {tgt.text}
+              </p>
+            </div>
+          ))}
         </div>
+      </section>
 
-        {/* Process */}
-        <div className="space-y-10 pt-6">
-          <div className="text-center">
-            <span className="text-xs font-bold text-brand-orange uppercase">PROCESS</span>
-            <h3 className="text-2xl font-bold text-gray-900 mt-1">성장코칭 프로세스</h3>
-            <p className="text-xs text-gray-500 mt-1">비전 수립부터 실질적인 결과 창출까지 4단계로 전개됩니다.</p>
-          </div>
+      {/* Divider */}
+      <div className="flex justify-center py-6">
+        <div className="w-[1px] h-14 bg-[#bbbbbb]"></div>
+      </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((s, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 relative flex flex-col justify-between shadow-sm">
-                <div>
-                  <span className="text-2xl font-black text-brand-gold/40 block mb-2">{s.step}</span>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">{s.title}</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">{s.desc}</p>
+      {/* 5. Process Section */}
+      <section className="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl font-medium text-center mb-16 text-[#222222]">
+          성장코칭 프로세스: 비전과 실현의 여정
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {processes.map((proc, idx) => (
+            <div
+              key={idx}
+              className="flex items-start gap-6 p-6 rounded-2xl bg-white border border-gray-150 shadow-sm"
+            >
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shrink-0 border border-gray-200 shadow-sm">
+                <img
+                  src={proc.image}
+                  alt={proc.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-xl font-bold text-brand-orange">{proc.step}</span>
+                  <h3 className="text-xl font-bold text-[#222222]">{proc.title}</h3>
                 </div>
+                <p className="text-sm sm:text-[15px] text-[#333333] leading-relaxed">
+                  {proc.desc}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+      </section>
 
-        {/* CTA */}
-        <div className="p-8 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <h4 className="text-lg font-bold text-gray-900">1:1 코칭 세션 문의</h4>
-            <p className="text-xs text-gray-500 mt-1">개인 코칭 및 임원/리더십 코칭 맞춤 설계가 가능합니다.</p>
-          </div>
-          <div className="flex items-center gap-3">
+      {/* Divider */}
+      <div className="flex justify-center py-6">
+        <div className="w-[1px] h-14 bg-[#bbbbbb]"></div>
+      </div>
+
+      {/* Bottom CTA */}
+      <section className="py-16 bg-[#fcfbfa] border-t border-gray-200 text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            삶의 주도적인 성장을 시작해보세요
+          </h3>
+          <p className="text-gray-600 text-sm sm:text-base mb-8">
+            성장코칭은 1:1 맞춤형 세션으로 진행되며 사전 진단을 통해 최적화된 로드맵을 수립합니다.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:02-566-8291"
-              className="inline-flex items-center gap-2 px-5 py-3 bg-brand-orange text-white text-sm font-semibold rounded-xl hover:bg-[#e04f1c] transition-colors shadow-sm"
+              className="px-6 py-3 bg-white border border-gray-300 rounded-full font-semibold text-gray-800 hover:border-brand-orange hover:text-brand-orange transition-colors"
             >
-              <Phone className="w-4 h-4" />
-              02-566-8291 문의
+              코칭 문의: 02-566-8291
             </a>
             <Link
               href="/pricing"
-              className="inline-flex items-center gap-2 px-5 py-3 border border-gray-300 bg-white text-gray-700 text-sm font-semibold rounded-xl hover:bg-gray-50 transition-colors"
+              className="px-6 py-3 bg-brand-orange text-white rounded-full font-semibold hover:bg-[#e04f1c] transition-colors shadow-sm"
             >
-              비용 안내
+              코칭 비용 및 안내 보기
             </Link>
           </div>
         </div>

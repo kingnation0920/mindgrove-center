@@ -1,126 +1,188 @@
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, FileText, CheckCircle2, Phone, Calendar, ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: '심리검사 | 사람과성장 코칭심리상담센터',
-  description: '종합심리검사, TCI 기질 및 성격검사, MMPI-2, K-WAIS 지능검사 등 공인된 전문 심리평가로 내면의 잠재력을 발견합니다.',
+  description: '정교한 진단은 막연한 위로보다 강력합니다. 공인된 전문 임상심리사가 직접 시행하고 해석하는 사람과성장 심리검사.',
 };
 
 export default function AssessmentPage() {
   const tests = [
     {
-      category: '성격 및 정서 검사',
+      title: '성격검사',
+      image: '/images/file_785680419.png',
       items: [
-        { name: 'MMPI-2 (성인 다면적 인성검사)', desc: '심리적 스트레스 요인, 정서 상태, 성격 구조를 객관적으로 파악' },
-        { name: 'MMPI-A (청소년 다면적 인성검사)', desc: '청소년기의 정서 불안, 대인관계, 학업 적응도를 다각도로 측정' },
-        { name: 'TCI (기질 및 성격검사)', desc: '타고난 기질(자극추구, 위험회피 등)과 후천적으로 형성된 성격 성숙도 평가' },
-        { name: 'SCT (문장완성검사)', desc: '무의식적인 감정과 대인관계 태도, 자아상을 탐색하는 투사적 검사' },
+        'MMPI-2(성인 다면적 인성검사)',
+        'mmpi-a(청소년 다면적 인성검사)',
+        'TCI(기질 및 성격검사)',
+        'SCT(문장완성검사)',
       ],
     },
     {
-      category: '인지 및 지능 검사',
+      title: '지능검사',
+      image: '/images/file_230626328.png',
       items: [
-        { name: 'K-WAIS-IV (한국판 웩슬러 성인지능검사)', desc: '인지적 강약점, 언어이해, 지각추론, 작업기억, 처리속도 정밀 분석' },
-        { name: 'K-WISC-V (한국판 웩슬러 아동청소년 지능검사)', desc: '학습 효율성 및 인지 발달 단계 점검, 잠재 역량 도출' },
-        { name: 'BGT (시각-운동 통합 및 뇌 손상 선별)', desc: '신경심리학적 기능 및 시지각 운동 협응 능력 평가' },
+        'K-WAIS-4(성인 지능검사)',
+        'K-WISC-5(아동청소년 지능검사)',
+        'BGT(시각-운동 통합 및 뇌 손상검사)',
+      ],
+    },
+    {
+      title: '추가검사',
+      image: '/images/file_1853070717.png',
+      items: [
+        'Rorschach(잉크반점검사)',
+        'HTP(집-나무-사람 검사)',
+        'TAT(대인관계 및 욕구 역동)',
+        'KFD(동적가족화검사)',
+      ],
+    },
+    {
+      title: '특화검사',
+      image: '/images/file_1310720734.png',
+      items: [
+        'PAT(부모양육태도검사)',
+        'K-PSI(부모양육스트레스검사)',
+        'K-CBCL(아동청소년 행동평가척도)',
+        'Strong(흥미검사)',
+        'Holland(적성탐색검사)',
+        'U&I(학습성격/진로검사)',
+        'NEO-PI-R(5요인 성격검사)',
+        'CAT(종합주의력검사) 등',
       ],
     },
   ];
 
   return (
-    <div className="bg-white">
-      {/* Banner */}
-      <section className="bg-gradient-to-b from-[#fcfbfa] to-white border-b border-gray-150 py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <span className="text-xs font-bold text-brand-orange uppercase tracking-widest">
-            PSYCHOLOGICAL ASSESSMENT
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-3 font-serif">
-            심리검사
-          </h1>
-          <p className="text-gray-500 text-sm sm:text-base mt-4 max-w-2xl mx-auto leading-relaxed">
-            Discovery: 정교한 진단은 막연한 위로보다 강력합니다. 내면의 씨앗을 발견하는 첫걸음
-          </p>
+    <div className="bg-white text-[#222222]">
+      {/* 1. Header Section */}
+      <section className="pt-20 pb-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#222222]">
+          심리검사
+        </h1>
+        <p className="mt-4 text-base sm:text-lg text-[#222222] font-normal">
+          Discovery: 잠재력을 발견하는 첫걸음
+        </p>
+      </section>
+
+      {/* 2. Main Circular Image */}
+      <section className="py-6 flex justify-center">
+        <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-sm border border-gray-150">
+          <img
+            src="/images/file_741930315.png"
+            alt="심리검사 대표 이미지"
+            className="w-full h-full object-cover"
+          />
         </div>
       </section>
 
-      <section className="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        {/* Intro quote */}
-        <div className="bg-orange-50/50 border border-orange-200/60 rounded-2xl p-8 sm:p-10 text-center max-w-3xl mx-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-            "정교한 진단은 막연한 위로보다 강력합니다."
-          </h2>
-          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-            사람과성장의 심리검사는 단순히 개인을 진단하는 것을 넘어, 당신이 가진 고유한 잠재력을 발견하고 성장을 가로막는 장애물을 객관적으로 파악하여 비로소 첫 싹을 틔울 수 있게 돕습니다.
-          </p>
-        </div>
+      {/* 3. Core Philosophy Text */}
+      <section className="py-8 max-w-3xl mx-auto px-4 text-center">
+        <h2 className="text-lg sm:text-xl font-medium text-[#222222] leading-relaxed">
+          정교한 진단은 막연한 위로보다 강력합니다.
+        </h2>
+        <p className="mt-3 text-sm sm:text-base text-[#444444] leading-relaxed font-normal">
+          사람과성장의 심리검사는 단순히 개인을 진단하는 것을 넘어, 당신이 가진 고유한 잠재력을 발견하고<br className="hidden sm:inline" />
+          성장을 가로막는 장애물을 객관적으로 파악하여 비로소 첫 싹을 틔울 수 있게 돕습니다.
+        </p>
+      </section>
 
-        {/* Tests Grid */}
-        <div className="space-y-10">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900">전문 심리검사 종류</h3>
-            <p className="text-xs text-gray-500 mt-1">상담 목적과 필요에 따라 최적의 맞춤 검사를 선별하여 진행합니다.</p>
-          </div>
+      {/* Divider */}
+      <div className="flex justify-center py-6">
+        <div className="w-[1px] h-14 bg-[#bbbbbb]"></div>
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tests.map((group, idx) => (
-              <div key={idx} className="bg-[#fcfbfa] border border-gray-200/80 rounded-2xl p-8 shadow-sm">
-                <h4 className="text-lg font-bold text-brand-orange mb-6 pb-3 border-b border-gray-200 flex items-center gap-2">
-                  <FileText className="w-5 h-5" />
-                  {group.category}
-                </h4>
-                <div className="space-y-5">
-                  {group.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className="space-y-1">
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0" />
-                        <h5 className="text-sm font-bold text-gray-900">{item.name}</h5>
-                      </div>
-                      <p className="text-xs text-gray-500 pl-6 leading-relaxed">{item.desc}</p>
-                    </div>
-                  ))}
-                </div>
+      {/* 4. Four Test Categories (2x2 Grid) */}
+      <section className="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {tests.map((t, idx) => (
+            <div
+              key={idx}
+              className="flex items-start gap-6 p-6 rounded-2xl bg-[#faf9f8] border border-gray-150 hover:shadow-md transition-shadow"
+            >
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shrink-0 border border-gray-200 shadow-sm bg-white">
+                <img
+                  src={t.image}
+                  alt={t.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+              <div className="flex-1">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#222222] mb-3">
+                  {t.title}
+                </h3>
+                <ul className="space-y-1.5 text-sm sm:text-[15px] text-[#333333] leading-relaxed">
+                  {t.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-1.5">
+                      <span className="text-brand-orange shrink-0">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 5. Gold / Olive Banner Section (#a89a59) */}
+      <section className="bg-[#a89a59] text-white py-16 px-4 sm:px-6 lg:px-8 mt-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center sm:text-left">
+            {/* 1 */}
+            <div className="space-y-3 p-4">
+              <h3 className="text-xl font-medium tracking-tight border-b border-white/30 pb-2">
+                공인된 전문가의 정밀한 분석
+              </h3>
+              <p className="text-sm text-white/95 leading-relaxed pt-2">
+                전문 임상심리사가 직접 검사를 시행하고 해석합니다.
+              </p>
+            </div>
+
+            {/* 2 */}
+            <div className="space-y-3 p-4">
+              <h3 className="text-xl font-medium tracking-tight border-b border-white/30 pb-2">
+                내담자 중심의 경청
+              </h3>
+              <p className="text-sm text-white/95 leading-relaxed pt-2">
+                불필요한 추가 검사를 지양합니다. 데이터에 치우치지 않고 당신의 진술 속 고유한 삶의 이야기에 먼저 집중합니다.
+              </p>
+            </div>
+
+            {/* 3 */}
+            <div className="space-y-3 p-4">
+              <h3 className="text-xl font-medium tracking-tight border-b border-white/30 pb-2">
+                통합적 자기 이해
+              </h3>
+              <p className="text-sm text-white/95 leading-relaxed pt-2">
+                현재의 심리적 상태는 물론, 미래의 성장 가능성을 통합적으로 분석하여 입체적인 자기 이해와 방향성을 함께 그립니다.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-          <div className="p-6 border border-gray-150 rounded-xl bg-white text-center space-y-2">
-            <h4 className="font-bold text-gray-900 text-base">공인된 전문가의 정밀 분석</h4>
-            <p className="text-xs text-gray-500 leading-relaxed">전문 임상심리사가 직접 검사를 시행하고 1:1 심층 해석 상담을 제공합니다.</p>
-          </div>
-          <div className="p-6 border border-gray-150 rounded-xl bg-white text-center space-y-2">
-            <h4 className="font-bold text-gray-900 text-base">내담자 중심의 경청</h4>
-            <p className="text-xs text-gray-500 leading-relaxed">불필요한 과잉 검사를 지양하며 데이터에만 치우치지 않고 삶의 이야기에 귀 기울입니다.</p>
-          </div>
-          <div className="p-6 border border-gray-150 rounded-xl bg-white text-center space-y-2">
-            <h4 className="font-bold text-gray-900 text-base">통합적 자기 이해</h4>
-            <p className="text-xs text-gray-500 leading-relaxed">현재의 어려움을 근본적으로 해소하고 앞으로의 진로와 삶의 로드맵을 수립합니다.</p>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="p-8 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <h4 className="text-lg font-bold text-gray-900">심리검사 예약 및 문의</h4>
-            <p className="text-xs text-gray-500 mt-1">사전 예약제로 진행되며, 검사 종류에 따라 소요 시간 및 비용이 상이합니다.</p>
-          </div>
-          <div className="flex items-center gap-3">
+      {/* Bottom CTA */}
+      <section className="py-16 bg-[#fcfbfa] border-t border-gray-200 text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            나를 객관적으로 이해하는 첫걸음
+          </h3>
+          <p className="text-gray-600 text-sm sm:text-base mb-8">
+            심리검사는 100% 예약제로 진행되며, 검사 종류에 따라 일정과 비용이 맞춤 조율됩니다.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:02-566-8291"
-              className="inline-flex items-center gap-2 px-5 py-3 bg-brand-orange text-white text-sm font-semibold rounded-xl hover:bg-[#e04f1c] transition-colors shadow-sm"
+              className="px-6 py-3 bg-white border border-gray-300 rounded-full font-semibold text-gray-800 hover:border-brand-orange hover:text-brand-orange transition-colors"
             >
-              <Phone className="w-4 h-4" />
-              02-566-8291 문의
+              검사 문의: 02-566-8291
             </a>
             <Link
               href="/pricing"
-              className="inline-flex items-center gap-2 px-5 py-3 border border-gray-300 bg-white text-gray-700 text-sm font-semibold rounded-xl hover:bg-gray-50 transition-colors"
+              className="px-6 py-3 bg-brand-orange text-white rounded-full font-semibold hover:bg-[#e04f1c] transition-colors shadow-sm"
             >
-              비용 안내
+              비용 및 이용안내 확인하기
             </Link>
           </div>
         </div>
