@@ -79,7 +79,7 @@ export default function Footer() {
               </span>
             </div>
             <a
-              href="https://map.naver.com"
+              href="https://naver.me/GSQTsIoF"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-full py-2.5 px-4 bg-[#03c75a] text-white text-xs font-semibold rounded hover:bg-[#02b350] transition-colors"
