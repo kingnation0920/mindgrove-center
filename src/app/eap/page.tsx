@@ -105,11 +105,11 @@ export default function EAPPage() {
             <div className="w-8 h-[2px] bg-brand-orange"></div>
             <div className="space-y-2 text-base text-gray-800">
               <a
-                href="tel:02-566-8291"
+                href="tel:02-556-8291"
                 className="flex items-center gap-2 hover:text-brand-orange transition-colors font-semibold"
               >
                 <Phone className="w-4 h-4 text-brand-orange" />
-                T: 02-566-8291
+                T: 02-556-8291
               </a>
               <a
                 href="mailto:sgcenter0123@gmail.com"
@@ -134,7 +134,7 @@ export default function EAPPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:02-566-8291"
+              href="tel:02-556-8291"
               className="px-6 py-3 bg-brand-orange text-white rounded-full font-semibold hover:bg-[#e04f1c] transition-colors shadow-sm"
             >
               기업 EAP 제휴 상담

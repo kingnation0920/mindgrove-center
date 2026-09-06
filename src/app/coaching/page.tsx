@@ -171,10 +171,10 @@ export default function CoachingPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:02-566-8291"
+              href="tel:02-556-8291"
               className="px-6 py-3 bg-white border border-gray-300 rounded-full font-semibold text-gray-800 hover:border-brand-orange hover:text-brand-orange transition-colors"
             >
-              코칭 문의: 02-566-8291
+              코칭 문의: 02-556-8291
             </a>
             <Link
               href="/pricing"

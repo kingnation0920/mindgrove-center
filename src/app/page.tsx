@@ -319,7 +319,7 @@ export default function HomePage() {
                   <Phone className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-gray-900">상담 문의</strong>
-                    <span>02-566-8291</span>
+                    <span>02-556-8291</span>
                   </div>
                 </div>
 
@@ -346,11 +346,11 @@ export default function HomePage() {
                   상담예약
                 </a>
                 <a
-                  href="tel:02-566-8291"
+                  href="tel:02-556-8291"
                   className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 border border-gray-300 text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   <Phone className="w-4 h-4 text-brand-orange" />
-                  전화 문의: 02-566-8291
+                  전화 문의: 02-556-8291
                 </a>
               </div>
             </div>
