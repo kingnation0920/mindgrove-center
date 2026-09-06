@@ -12,33 +12,132 @@
 
 /* Froala / Raw HTML renderer styles for preserved board contents */
 .board_contents, .page_block_content {
-  line-height: 1.8;
+  line-height: 1.85;
   color: #333333;
   font-size: 16px;
   word-break: keep-all;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .board_contents p, .page_block_content p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.1rem;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .board_contents img, .page_block_content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px;
   margin: 1.5rem auto;
   display: block;
+  box-sizing: border-box;
 }
 
 .board_contents a, .page_block_content a {
   color: #fe5e29;
   text-decoration: underline;
   text-underline-offset: 4px;
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .board_contents h1, .board_contents h2, .board_contents h3 {
   font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
   color: #111111;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-height: 1.45;
 }
+
+.board_contents h2 {
+  font-size: 1.25rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #fe5e29;
+  padding-left: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .board_contents h2 {
+    font-size: 1.45rem;
+  }
+}
+
+.board_contents h3 {
+  font-size: 1.1rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Custom layout blocks for rich readable blog posts */
+.board_contents .highlight_box {
+  background-color: #fff8f5;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.board_contents .quote_box {
+  background-color: #f8fafc;
+  border-left: 4px solid #fe5e29;
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.board_contents .faq_card {
+  background-color: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.board_contents .tip_box {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.board_contents .citation_box {
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.board_contents .tag_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed #e5e7eb;
+}
+
+.board_contents .tag_item {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  font-size: 0.8125rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+

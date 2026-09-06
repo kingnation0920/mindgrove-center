@@ -94,13 +94,13 @@ export default async function BlogPage({
                     </span>
                   </div>
 
-                  <h2 className="text-base sm:text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors line-clamp-2 leading-snug mb-3">
+                  <h2 className="text-base sm:text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors line-clamp-2 leading-snug mb-3 break-keep break-words">
                     <Link href={`/blog/${post.id}`}>
                       {post.title}
                     </Link>
                   </h2>
 
-                  <p className="text-xs sm:text-sm text-gray-500 line-clamp-3 leading-relaxed flex-grow mb-4">
+                  <p className="text-xs sm:text-sm text-gray-500 line-clamp-3 leading-relaxed flex-grow mb-4 break-keep break-words">
                     {cleanSnippet}...
                   </p>
 
