@@ -10,7 +10,7 @@
 .font-kalguksu {
   font-family: 'NanumKalGugSu', cursive, sans-serif;
   font-weight: 700;
-  -webkit-text-stroke: 0.7px currentColor;
+  -webkit-text-stroke: 0.5px currentColor;
   paint-order: stroke fill;
 }
 
