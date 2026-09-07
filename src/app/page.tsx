@@ -52,9 +52,9 @@ export default function HomePage() {
           <p className="text-sm md:text-base font-semibold text-brand-orange tracking-widest uppercase mb-4">
             People & Growth Psychological Counseling Center
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-[#222222] tracking-tight leading-snug md:leading-normal font-serif">
-            나에서 시작해<br className="sm:hidden" />
-            <span className="text-brand-orange font-normal"> 우리로 이어지는 </span><br />
+          <h1 className="font-kalguksu text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#222222] leading-[1.8] sm:leading-[1.9] md:leading-[2.0] tracking-normal font-bold">
+            나에서 시작해<br />
+            우리로 이어지는<br />
             성장의 여정.
           </h1>
           <div className="mt-8 flex justify-center">
