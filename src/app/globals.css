@@ -2,13 +2,16 @@
   font-family: 'NanumKalGugSu';
   src: url('/fonts/subset-NanumKalGugSu.woff2') format('woff2'),
        url('/fonts/subset-NanumKalGugSu.woff') format('woff');
-  font-weight: 100 900;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 .font-kalguksu {
   font-family: 'NanumKalGugSu', cursive, sans-serif;
+  font-weight: 700;
+  -webkit-text-stroke: 0.7px currentColor;
+  paint-order: stroke fill;
 }
 
 @tailwind base;
