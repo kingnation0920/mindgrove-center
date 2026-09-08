@@ -51,6 +51,23 @@
   box-sizing: border-box;
 }
 
+.board_contents figure {
+  margin: 2rem 0;
+  max-width: 100%;
+}
+
+.board_contents figure img {
+  margin: 0 auto;
+}
+
+.board_contents figcaption {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 0.5rem;
+  word-break: keep-all;
+}
+
 .board_contents a, .page_block_content a {
   color: #fe5e29;
   text-decoration: underline;
