@@ -23,11 +23,11 @@ export default function NotFound() {
             홈으로 이동
           </Link>
           <a
-            href="tel:02-556-8291"
+            href="tel:02-566-8291"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-300 rounded-full font-semibold text-gray-700 hover:border-brand-orange hover:text-brand-orange transition-colors text-sm"
           >
             <Phone className="w-4 h-4" />
-            문의 02-556-8291
+            문의 02-566-8291
           </a>
         </div>
       </div>

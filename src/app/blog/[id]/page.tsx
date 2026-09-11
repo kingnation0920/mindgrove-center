@@ -116,11 +116,11 @@ export default async function BlogPostPage({ params }: PostPageProps) {
           </div>
           <div className="flex items-center gap-3 w-full sm:w-auto justify-center">
             <a
-              href="tel:02-556-8291"
+              href="tel:02-566-8291"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-brand-orange hover:bg-[#e04f1c] text-white text-xs sm:text-sm font-semibold rounded-xl transition-colors shadow-sm w-full sm:w-auto"
             >
               <Phone className="w-4 h-4 shrink-0" />
-              상담 문의 02-556-8291
+              상담 문의 02-566-8291
             </a>
           </div>
         </div>

@@ -47,7 +47,7 @@ export default function Footer() {
               <li className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-brand-orange shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-semibold text-white">02-556-8291</span>
+                  <span className="font-semibold text-white">02-566-8291</span>
                   <p className="text-xs text-gray-400">100% 사전 예약제 운영</p>
                 </div>
               </li>

@@ -57,11 +57,11 @@ export default function Header() {
           {/* Action CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="tel:02-556-8291"
+              href="tel:02-566-8291"
               className="flex items-center gap-1.5 text-sm font-semibold text-gray-700 hover:text-brand-orange transition-colors"
             >
               <Phone className="w-4 h-4 text-brand-orange" />
-              02-556-8291
+              02-566-8291
             </a>
             <a
               href="https://naver.me/GSQTsIoF"
@@ -77,7 +77,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <div className="flex lg:hidden items-center gap-1">
             <a
-              href="tel:02-556-8291"
+              href="tel:02-566-8291"
               className="p-2 text-brand-orange"
               aria-label="전화걸기"
             >
@@ -110,11 +110,11 @@ export default function Header() {
           ))}
           <div className="pt-4 border-t border-gray-100 flex flex-col gap-2">
             <a
-              href="tel:02-556-8291"
+              href="tel:02-566-8291"
               className="flex items-center justify-center gap-2 w-full py-3 bg-gray-50 rounded-lg text-sm font-semibold text-gray-800"
             >
               <Phone className="w-4 h-4 text-brand-orange" />
-              상담 문의: 02-556-8291
+              상담 문의: 02-566-8291
             </a>
             <a
               href="https://naver.me/GSQTsIoF"

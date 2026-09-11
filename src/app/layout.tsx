@@ -67,7 +67,7 @@ const jsonLd = {
     'latitude': '37.4979',
     'longitude': '127.0280'
   },
-  'telephone': '+82-2-556-8291',
+  'telephone': '+82-2-566-8291',
   'email': 'sgcenter0123@gmail.com',
   'openingHoursSpecification': {
     '@type': 'OpeningHoursSpecification',
