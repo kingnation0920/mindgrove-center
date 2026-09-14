@@ -38,6 +38,9 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
       authors: [post.writer],
       url: `https://mindgrove.kr/blog/${post.id}`,
     },
+    alternates: {
+      canonical: `/blog/${post.id}`,
+    },
   };
 }
 
