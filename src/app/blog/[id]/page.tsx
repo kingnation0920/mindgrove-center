@@ -57,28 +57,79 @@ export default async function BlogPostPage({ params }: PostPageProps) {
   const prevPost = postIndex > 0 ? postsData[postIndex - 1] : null;
   const nextPost = postIndex < postsData.length - 1 ? postsData[postIndex + 1] : null;
 
+  function formatContentHtml(html: string): string {
+    if ((html.match(/<h2/g) || []).length >= 2) return html;
+
+    let formatted = html.replace(
+      /<p>([^\n<]{4,40})<br\s*\/?>/g,
+      '<h2 class="text-xl sm:text-2xl font-bold text-gray-900 mt-10 mb-4 break-keep">$1</h2><p>'
+    );
+
+    if (!formatted.includes('<h2')) {
+      let figCount = 0;
+      const headings = [
+        '1. 마음의 신호 알아차리기: 우리가 마주한 심리적 어려움',
+        '2. 임상심리학적 분석: 반복되는 패턴과 무의식적 방어기제',
+        '3. 온전한 나로 회복하기: 자기자비와 건강한 실천법',
+      ];
+      formatted = formatted.replace(/<figure/g, () => {
+        const h = headings[figCount] || '전문 상담과 치유의 방향';
+        figCount++;
+        return `<h2 class="text-xl sm:text-2xl font-bold text-gray-900 mt-10 mb-4 break-keep">${h}</h2><figure`;
+      });
+    }
+    return formatted;
+  }
+
   const articleJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    datePublished: post.date,
-    dateModified: post.date,
-    inLanguage: 'ko-KR',
-    mainEntityOfPage: `https://mindgrove.kr/blog/${post.id}`,
-    author: {
-      '@type': 'Person',
-      name: post.writer || '김민경 센터장',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: '사람과성장 코칭심리상담센터',
-      url: 'https://mindgrove.kr',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://mindgrove.kr/images/file_809332737.png',
+    '@graph': [
+      {
+        '@type': 'BlogPosting',
+        headline: post.title,
+        datePublished: post.date,
+        dateModified: post.date,
+        inLanguage: 'ko-KR',
+        mainEntityOfPage: `https://mindgrove.kr/blog/${post.id}`,
+        author: {
+          '@type': 'Person',
+          name: post.writer || '김민경 센터장',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: '사람과성장 코칭심리상담센터',
+          url: 'https://mindgrove.kr',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://mindgrove.kr/images/file_809332737.png',
+          },
+        },
       },
-    },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '심리상담이나 코칭은 어떤 순서로 진행되나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '초기 접수 면담을 통해 현재 겪고 계신 주 호소 문제를 명확히 파악하고, 필요 시 과학적인 심리검사(MMPI, TCI 등)를 병행하여 1:1 맞춤형 목표를 설정합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '상담 기록이나 검사 결과는 비밀이 보장되나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '사람과성장 코칭심리상담센터는 한국상담심리학회 및 한국임상심리학회 윤리 규정을 엄격히 준수하며, 모든 상담 및 검사 내용은 법적으로 철저히 비밀이 보장됩니다.',
+            },
+          },
+        ],
+      },
+    ],
   };
+
+  const hasExistingFaq = post.contentHtml.includes('자주 묻는 질문');
 
   return (
     <article className="bg-white min-h-screen py-8 sm:py-12 md:py-20 overflow-x-hidden">
@@ -126,13 +177,48 @@ export default async function BlogPostPage({ params }: PostPageProps) {
               </span>
             )}
           </div>
+
+          {/* Direct Answer Summary Box */}
+          <div className="mt-6 p-4 sm:p-5 bg-orange-50/70 border-l-4 border-brand-orange rounded-r-xl shadow-xs">
+            <p className="text-xs sm:text-sm font-bold text-gray-900 mb-1.5 flex items-center gap-1.5">
+              <span>💡</span> 핵심 요약 (Direct Answer)
+            </p>
+            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed break-keep font-medium">
+              {snippet}
+            </p>
+          </div>
         </header>
 
         {/* Post Body (Preserved HTML with mobile-safe wrapping) */}
         <div
           className="board_contents max-w-none text-gray-800 leading-relaxed font-normal w-full overflow-hidden break-words"
-          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+          dangerouslySetInnerHTML={{ __html: formatContentHtml(post.contentHtml) }}
         />
+
+        {/* Default FAQ Section if not in content */}
+        {!hasExistingFaq && (
+          <section className="mt-12 pt-8 border-t border-gray-200">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">자주 묻는 질문 (FAQ)</h2>
+            <div className="space-y-4">
+              <div className="bg-orange-50/40 p-5 rounded-xl border border-orange-100/80">
+                <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-1.5">
+                  Q. 심리상담이나 코칭은 어떤 순서로 진행되나요?
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                  초기 접수 면담을 통해 현재 겪고 계신 주 호소 문제를 명확히 파악하고, 필요 시 과학적인 심리검사(MMPI, TCI 등)를 병행하여 1:1 맞춤형 목표를 설정합니다.
+                </p>
+              </div>
+              <div className="bg-orange-50/40 p-5 rounded-xl border border-orange-100/80">
+                <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-1.5">
+                  Q. 상담 기록이나 검사 결과는 비밀이 보장되나요?
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                  사람과성장 코칭심리상담센터는 한국상담심리학회 및 한국임상심리학회 윤리 규정을 엄격히 준수하며, 모든 상담 및 검사 내용은 법적으로 철저히 비밀이 보장됩니다.
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Call To Action Banner */}
         <div className="mt-14 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-orange-50/70 to-amber-50/70 border border-orange-200/70 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
