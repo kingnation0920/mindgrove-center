@@ -57,8 +57,35 @@ export default async function BlogPostPage({ params }: PostPageProps) {
   const prevPost = postIndex > 0 ? postsData[postIndex - 1] : null;
   const nextPost = postIndex < postsData.length - 1 ? postsData[postIndex + 1] : null;
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: 'ko-KR',
+    mainEntityOfPage: `https://mindgrove.kr/blog/${post.id}`,
+    author: {
+      '@type': 'Person',
+      name: post.writer || '김민경 센터장',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: '사람과성장 코칭심리상담센터',
+      url: 'https://mindgrove.kr',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://mindgrove.kr/images/file_809332737.png',
+      },
+    },
+  };
+
   return (
     <article className="bg-white min-h-screen py-8 sm:py-12 md:py-20 overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb & Back */}
         <div className="mb-6 sm:mb-8">

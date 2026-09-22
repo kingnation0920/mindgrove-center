@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata = {
   title: '성장코칭 | 사람과성장 코칭심리상담센터',
   description: '성장은 속도가 아니라 방향의 문제입니다. 당신의 잠재력을 깨워 진짜 성취로 바꾸는 실전형 파트너, 사람과성장 성장코칭.',
+  alternates: {
+    canonical: '/coaching',
+  },
 };
 
 export default function CoachingPage() {

@@ -5,6 +5,9 @@ import { Phone, Mail } from 'lucide-react';
 export const metadata = {
   title: '기업심리(EAP) | 사람과성장 코칭심리상담센터',
   description: '개인과 조직이 서로에게 건강한 가지를 뻗습니다. 상담가의 통찰과 경영전문가의 데이터를 더한 EAP 임직원 멘탈케어.',
+  alternates: {
+    canonical: '/eap',
+  },
 };
 
 export default function EAPPage() {

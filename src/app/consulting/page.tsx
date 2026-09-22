@@ -5,6 +5,9 @@ import { Phone, Mail } from 'lucide-react';
 export const metadata = {
   title: '비즈니스 컨설팅 | 사람과성장 코칭심리상담센터',
   description: '생존을 넘어, 비약적인 성장을 제안합니다. 800억 규모의 M&A를 성공시킨 실전가와 비즈니스의 새로운 판을 짜십시오.',
+  alternates: {
+    canonical: '/consulting',
+  },
 };
 
 export default function ConsultingPage() {

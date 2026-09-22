@@ -5,6 +5,9 @@ import { Phone, Mail, MessageSquare, Clock, Calendar } from 'lucide-react';
 export const metadata = {
   title: '운영시간 & 비용안내 | 사람과성장 코칭심리상담센터',
   description: '사람과성장은 100% 예약제로 운영됩니다. 운영시간 및 심리검사, 개인상담, 부부상담, 비즈니스 컨설팅 비용 안내.',
+  alternates: {
+    canonical: '/pricing',
+  },
 };
 
 export default function PricingPage() {

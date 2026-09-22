@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata = {
   title: '심리검사 | 사람과성장 코칭심리상담센터',
   description: '정교한 진단은 막연한 위로보다 강력합니다. 공인된 전문 임상심리사가 직접 시행하고 해석하는 사람과성장 심리검사.',
+  alternates: {
+    canonical: '/assessment',
+  },
 };
 
 export default function AssessmentPage() {

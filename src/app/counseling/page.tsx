@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata = {
   title: '심리상담 | 사람과성장 코칭심리상담센터',
   description: '잠시 흔들려도 괜찮습니다. 아픔을 덜어내는 단계를 넘어 다시 단단하게 뿌리 내리는 사람과성장 심리상담.',
+  alternates: {
+    canonical: '/counseling',
+  },
 };
 
 export default function CounselingPage() {

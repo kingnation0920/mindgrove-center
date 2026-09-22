@@ -6,6 +6,9 @@ import postsData from '@/data/posts.json';
 export const metadata = {
   title: '심리 칼럼 및 소식 | 사람과성장 코칭심리상담센터',
   description: '임상 심리 연구와 실제 상담 사례를 바탕으로 작성된 사람과성장 코칭심리상담센터의 전문 심리 칼럼 모음입니다.',
+  alternates: {
+    canonical: '/blog',
+  },
 };
 
 export default async function BlogPage({
