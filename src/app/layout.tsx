@@ -4,9 +4,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: '사람과 성장 코칭심리상담센터',
+  title: '사람과성장 코칭심리상담센터',
   description: '서울 강남역 인근 프라이빗 심리상담센터. 심리검사, 개인 심리상담, 부부상담, 커플상담, 여성 창업자 멘탈 코칭, CEO 번아웃 상담, 성장코칭, 기업심리 EAP, 비즈니스 컨설팅 제공.',
-  authors: [{ name: '사람과 성장 코칭심리상담센터' }],
+  authors: [{ name: '사람과성장 코칭심리상담센터' }],
   metadataBase: new URL('https://mindgrove.kr'),
   alternates: {
     canonical: '/',
@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     shortcut: '/images/file_1967099491.png',
   },
   openGraph: {
-    title: '사람과 성장 코칭심리상담센터',
+    title: '사람과성장 코칭심리상담센터',
     description: '서울 강남역 인근 프라이빗 심리상담센터. 심리검사, 개인 심리상담, 부부상담, 커플상담, 여성 창업자 멘탈 코칭, CEO 번아웃 상담, 성장코칭, 기업심리 EAP, 비즈니스 컨설팅 제공.',
     url: 'https://mindgrove.kr',
-    siteName: '사람과 성장 코칭심리상담센터',
+    siteName: '사람과성장 코칭심리상담센터',
     images: [
       {
         url: '/images/file_809332737.png',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '사람과 성장 코칭심리상담센터',
-    description: '사람과 성장 코칭심리상담센터',
+    title: '사람과성장 코칭심리상담센터',
+    description: '서울 강남역 인근 프라이빗 코칭심리상담센터. 1급 임상심리전문가의 맞춤 상담 및 코칭 제공.',
     images: ['/images/file_809332737.png'],
   },
   verification: {
@@ -81,7 +81,17 @@ const jsonLd = {
   'areaServed': ['강남구', '서초구', '송파구', '역삼동', '선릉', '교대', '양재', '논현'],
   'founder': {
     '@type': 'Person',
-    'name': '김민경'
+    'name': '김민경',
+    'jobTitle': '센터장 / 보건복지부 공인 1급 임상심리사',
+    'hasCredential': [
+      { '@type': 'EducationalOccupationalCredential', 'name': '보건복지부 임상심리사 1급' },
+      { '@type': 'EducationalOccupationalCredential', 'name': '보건복지부 사회복지사 1급' },
+      { '@type': 'EducationalOccupationalCredential', 'name': '여성가족부 청소년상담사 2급' }
+    ],
+    'alumniOf': [
+      { '@type': 'EducationalOrganization', 'name': '명지대학교 대학원 코칭심리학 박사과정' },
+      { '@type': 'EducationalOrganization', 'name': '명지대학교 대학원 상담심리 석사' }
+    ]
   },
   'legalName': '사람과성장 코칭심리상담센터',
   'taxID': '112-20-23060'

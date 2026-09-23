@@ -15,17 +15,26 @@ export async function generateStaticParams() {
   }));
 }
 
+function cleanSnippet(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .substring(0, 160);
+}
+
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const post = postsData.find((p) => p.id.toString() === resolvedParams.id);
   if (!post) return { title: '글을 찾을 수 없습니다' };
 
-  const snippet = post.contentHtml
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .substring(0, 160);
+  const snippet = cleanSnippet(post.contentHtml);
 
   return {
     title: `${post.title} | 사람과성장 코칭심리상담센터`,
@@ -35,7 +44,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
       description: snippet,
       type: 'article',
       publishedTime: post.date,
-      authors: [post.writer],
+      authors: [post.writer || '김민경 센터장'],
       url: `https://mindgrove.kr/blog/${post.id}`,
     },
     alternates: {
@@ -57,12 +66,7 @@ export default async function BlogPostPage({ params }: PostPageProps) {
   const prevPost = postIndex > 0 ? postsData[postIndex - 1] : null;
   const nextPost = postIndex < postsData.length - 1 ? postsData[postIndex + 1] : null;
 
-  const snippet = post.contentHtml
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .substring(0, 160);
+  const snippet = cleanSnippet(post.contentHtml);
 
   function formatContentHtml(html: string): string {
     if ((html.match(/<h2/g) || []).length >= 2) return html;
@@ -94,13 +98,30 @@ export default async function BlogPostPage({ params }: PostPageProps) {
       {
         '@type': 'BlogPosting',
         headline: post.title,
+        description: snippet,
         datePublished: post.date,
         dateModified: post.date,
         inLanguage: 'ko-KR',
         mainEntityOfPage: `https://mindgrove.kr/blog/${post.id}`,
         author: {
           '@type': 'Person',
-          name: post.writer || '김민경 센터장',
+          name: '김민경',
+          jobTitle: '보건복지부 공인 1급 임상심리사 / 코칭심리학 박사 연구원',
+          description: '사람과성장 코칭심리상담센터 센터장. 명지대학교 대학원 코칭심리학 박사과정, 보건복지부 임상심리사 1급, 사회복지사 1급.',
+          worksFor: {
+            '@type': 'Organization',
+            name: '사람과성장 코칭심리상담센터',
+            url: 'https://mindgrove.kr',
+          },
+          hasCredential: [
+            { '@type': 'EducationalOccupationalCredential', name: '보건복지부 임상심리사 1급' },
+            { '@type': 'EducationalOccupationalCredential', name: '보건복지부 사회복지사 1급' },
+            { '@type': 'EducationalOccupationalCredential', name: '여성가족부 청소년상담사 2급' },
+          ],
+          alumniOf: [
+            { '@type': 'EducationalOrganization', name: '명지대학교 대학원 코칭심리학 박사과정' },
+            { '@type': 'EducationalOrganization', name: '명지대학교 대학원 상담심리 석사' },
+          ],
         },
         publisher: {
           '@type': 'Organization',
@@ -227,8 +248,27 @@ export default async function BlogPostPage({ params }: PostPageProps) {
           </section>
         )}
 
+        {/* Author / Reviewer Profile Card */}
+        <div className="mt-12 p-5 sm:p-6 bg-orange-50/40 rounded-2xl border border-orange-100 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 shadow-xs">
+          <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center font-bold text-base shrink-0 shadow-xs">
+            김
+          </div>
+          <div className="space-y-1">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="font-bold text-gray-950 text-sm sm:text-base">김민경 센터장</span>
+              <span className="text-xs bg-orange-100 text-brand-orange font-semibold px-2.5 py-0.5 rounded-full">
+                보건복지부 공인 1급 임상심리사
+              </span>
+              <span className="text-xs text-gray-500 font-medium">코칭심리학 박사과정</span>
+            </div>
+            <p className="text-xs text-gray-600 leading-relaxed break-keep">
+              보건복지부 사회복지사 1급 · 여성가족부 청소년상담사 2급 | 명지대 상담심리 석사 졸업 | 마케팅 법인 기획 총괄 및 기업·법인 심리상담/코칭 전문
+            </p>
+          </div>
+        </div>
+
         {/* Call To Action Banner */}
-        <div className="mt-14 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-orange-50/70 to-amber-50/70 border border-orange-200/70 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+        <div className="mt-8 sm:mt-10 p-6 sm:p-8 bg-gradient-to-r from-orange-50/70 to-amber-50/70 border border-orange-200/70 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="text-base sm:text-lg font-bold text-gray-900 break-keep">
               마음의 상처와 고민, 혼자 힘들어하지 마세요
