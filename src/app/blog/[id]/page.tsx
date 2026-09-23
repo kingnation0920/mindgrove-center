@@ -57,6 +57,13 @@ export default async function BlogPostPage({ params }: PostPageProps) {
   const prevPost = postIndex > 0 ? postsData[postIndex - 1] : null;
   const nextPost = postIndex < postsData.length - 1 ? postsData[postIndex + 1] : null;
 
+  const snippet = post.contentHtml
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .substring(0, 160);
+
   function formatContentHtml(html: string): string {
     if ((html.match(/<h2/g) || []).length >= 2) return html;
 
