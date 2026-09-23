@@ -18,12 +18,17 @@ export async function generateStaticParams() {
 function cleanSnippet(html: string): string {
   return html
     .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;quot;/g, '"')
     .replace(/&quot;/g, '"')
-    .replace(/&amp;/g, '&')
+    .replace(/&amp;#39;/g, "'")
     .replace(/&#39;/g, "'")
+    .replace(/&amp;lt;/g, '<')
     .replace(/&lt;/g, '<')
+    .replace(/&amp;gt;/g, '>')
     .replace(/&gt;/g, '>')
+    .replace(/&amp;nbsp;/g, ' ')
     .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
     .replace(/\s+/g, ' ')
     .trim()
     .substring(0, 160);
@@ -69,9 +74,15 @@ export default async function BlogPostPage({ params }: PostPageProps) {
   const snippet = cleanSnippet(post.contentHtml);
 
   function formatContentHtml(html: string): string {
-    if ((html.match(/<h2/g) || []).length >= 2) return html;
+    let formatted = html
+      .replace(/&amp;quot;/g, '"')
+      .replace(/&quot;/g, '"')
+      .replace(/&amp;#39;/g, "'")
+      .replace(/&#39;/g, "'");
 
-    let formatted = html.replace(
+    if ((formatted.match(/<h2/g) || []).length >= 2) return formatted;
+
+    formatted = formatted.replace(
       /<p>([^\n<]{4,40})<br\s*\/?>/g,
       '<h2 class="text-xl sm:text-2xl font-bold text-gray-900 mt-10 mb-4 break-keep">$1</h2><p>'
     );
