@@ -82,15 +82,15 @@ const jsonLd = {
   'founder': {
     '@type': 'Person',
     'name': '김민경',
-    'jobTitle': '센터장 / 보건복지부 공인 1급 임상심리사',
+    'jobTitle': '센터장 / 보건복지부 임상심리사 1급',
     'hasCredential': [
       { '@type': 'EducationalOccupationalCredential', 'name': '보건복지부 임상심리사 1급' },
       { '@type': 'EducationalOccupationalCredential', 'name': '보건복지부 사회복지사 1급' },
       { '@type': 'EducationalOccupationalCredential', 'name': '여성가족부 청소년상담사 2급' }
     ],
     'alumniOf': [
-      { '@type': 'EducationalOrganization', 'name': '명지대학교 대학원 코칭심리학 박사과정' },
-      { '@type': 'EducationalOrganization', 'name': '명지대학교 대학원 상담심리 석사' }
+      { '@type': 'EducationalOrganization', 'name': '명지대학교 대학원 코칭심리학 박사 과정' },
+      { '@type': 'EducationalOrganization', 'name': '명지대학교 대학원 상담심리 석사 졸업' }
     ]
   },
   'legalName': '사람과성장 코칭심리상담센터',

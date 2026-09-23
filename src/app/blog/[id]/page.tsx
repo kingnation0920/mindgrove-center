@@ -117,8 +117,8 @@ export default async function BlogPostPage({ params }: PostPageProps) {
         author: {
           '@type': 'Person',
           name: '김민경',
-          jobTitle: '보건복지부 공인 1급 임상심리사 / 코칭심리학 박사 연구원',
-          description: '사람과성장 코칭심리상담센터 센터장. 명지대학교 대학원 코칭심리학 박사과정, 보건복지부 임상심리사 1급, 사회복지사 1급.',
+          jobTitle: '사람과성장 코칭심리상담센터 센터장 / 보건복지부 임상심리사 1급',
+          description: '보건복지부 임상심리사 1급, 명지대학교 대학원 코칭심리학 박사 과정, 명지대학교 대학원 상담심리 석사 졸업, 사람과성장 코칭심리상담센터 센터장.',
           worksFor: {
             '@type': 'Organization',
             name: '사람과성장 코칭심리상담센터',
@@ -130,9 +130,16 @@ export default async function BlogPostPage({ params }: PostPageProps) {
             { '@type': 'EducationalOccupationalCredential', name: '여성가족부 청소년상담사 2급' },
           ],
           alumniOf: [
-            { '@type': 'EducationalOrganization', name: '명지대학교 대학원 코칭심리학 박사과정' },
-            { '@type': 'EducationalOrganization', name: '명지대학교 대학원 상담심리 석사' },
+            { '@type': 'EducationalOrganization', name: '명지대학교 대학원 코칭심리학 박사 과정' },
+            { '@type': 'EducationalOrganization', name: '명지대학교 대학원 상담심리 석사 졸업' },
           ],
+        },
+        reviewedBy: {
+          '@type': 'Person',
+          name: '김민경',
+          jobTitle: '보건복지부 임상심리사 1급 / 센터장',
+          description: '보건복지부 임상심리사 1급, 명지대학교 대학원 코칭심리학 박사 과정, 명지대학교 대학원 상담심리 석사 졸업, 사람과성장 코칭심리상담센터 센터장.',
+          url: 'https://mindgrove.kr',
         },
         publisher: {
           '@type': 'Organization',
@@ -268,12 +275,12 @@ export default async function BlogPostPage({ params }: PostPageProps) {
             <div className="flex flex-wrap items-center gap-2">
               <span className="font-bold text-gray-950 text-sm sm:text-base">김민경 센터장</span>
               <span className="text-xs bg-orange-100 text-brand-orange font-semibold px-2.5 py-0.5 rounded-full">
-                보건복지부 공인 1급 임상심리사
+                보건복지부 임상심리사 1급
               </span>
-              <span className="text-xs text-gray-500 font-medium">코칭심리학 박사과정</span>
+              <span className="text-xs text-gray-500 font-medium">명지대 코칭심리학 박사 과정</span>
             </div>
             <p className="text-xs text-gray-600 leading-relaxed break-keep">
-              보건복지부 사회복지사 1급 · 여성가족부 청소년상담사 2급 | 명지대 상담심리 석사 졸업 | 마케팅 법인 기획 총괄 및 기업·법인 심리상담/코칭 전문
+              보건복지부 사회복지사 1급 · 여성가족부 청소년상담사 2급 | 명지대학교 대학원 상담심리 석사 졸업 | 마케팅 법인 기획 총괄 및 기업·법인 심리상담/코칭 총괄
             </p>
           </div>
         </div>
