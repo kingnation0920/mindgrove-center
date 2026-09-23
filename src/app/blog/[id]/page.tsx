@@ -273,7 +273,7 @@ export default async function BlogPostPage({ params }: PostPageProps) {
           </div>
           <div className="space-y-1">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="font-bold text-gray-950 text-sm sm:text-base">김민경 센터장</span>
+              <span className="font-bold text-gray-950 text-sm sm:text-base">글쓴이 김민경 센터장</span>
               <span className="text-xs bg-orange-100 text-brand-orange font-semibold px-2.5 py-0.5 rounded-full">
                 보건복지부 임상심리사 1급
               </span>
