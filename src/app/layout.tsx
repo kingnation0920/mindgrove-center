@@ -118,6 +118,19 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <script type="text/javascript" src="//wcs.pstatic.net/wcslog.js" />
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "174e9dce44d5bd0";
+if(window.wcs) {
+  wcs_do();
+}
+`,
+          }}
+        />
       </body>
     </html>
   );
