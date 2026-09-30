@@ -12,8 +12,12 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   icons: {
-    icon: '/images/file_1967099491.png',
-    shortcut: '/images/file_1967099491.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/file_1967099491.png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     title: '사람과성장 코칭심리상담센터',
