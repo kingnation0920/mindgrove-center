@@ -10,6 +10,11 @@
       ],
       "destination": "https://mindgrove.kr/:path*",
       "permanent": true
+    },
+    {
+      "source": "/blog/15",
+      "destination": "/blog/13",
+      "permanent": true
     }
   ]
 }
