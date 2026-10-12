@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '사람과성장 코칭심리상담센터',
-    description: '서울 강남역 인근 프라이빗 코칭심리상담센터. 1급 임상심리전문가의 맞춤 상담 및 코칭 제공.',
+    description: '서울 강남역 인근 프라이빗 코칭심리상담센터. 보건복지부 임상심리사 1급 · 보건복지부 사회복지사 1급 · 여성가족부 청소년상담사 2급 센터장의 맞춤 상담 및 코칭 제공.',
     images: ['/images/file_809332737.png'],
   },
   verification: {
@@ -57,7 +57,7 @@ const jsonLd = {
   '@id': 'https://mindgrove.kr',
   'url': 'https://mindgrove.kr',
   'image': 'https://mindgrove.kr/images/file_809332737.png',
-  'description': '서울 강남역 인근 프라이빗 심리상담센터. 심리검사, 개인 심리상담, 부부상담, 커플상담, 여성 창업자 멘탈 코칭, CEO 번아웃 상담, 성장코칭, 기업심리 EAP, 비즈니스 컨설팅 제공.',
+  'description': '서울 강남역 인근 프라이빗 심리상담센터. 심리검사, 개인 심리상담, 부부상담, 커플상담, 여성 창업자 멘탈 코칭, CEO 번아웃 상담, 성장코칭, 기업심리 EAP, 비즈니스 컨설팅 제공. 보건복지부 임상심리사 1급 · 보건복지부 사회복지사 1급 · 여성가족부 청소년상담사 2급.',
   'address': {
     '@type': 'PostalAddress',
     'streetAddress': '강남대로 320 황화빌딩 10층 1001, 1002호',

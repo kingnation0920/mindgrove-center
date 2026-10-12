@@ -17,7 +17,7 @@ export default function HomePage() {
     {
       title: '심리상담',
       subtitle: '"단단한 뿌리를 내립니다"',
-      desc: '불안, 우울, 부부·가족 갈등, 번아웃 등 1급 임상 전문가의 1:1 맞춤 상담으로 상처를 보듬고 회복합니다.',
+      desc: '불안, 우울, 부부·가족 갈등, 번아웃 등 보건복지부 1급 임상심리사의 1:1 맞춤 상담으로 상처를 보듬고 회복합니다.',
       image: '/images/file_311587389.png',
       href: '/counseling',
     },

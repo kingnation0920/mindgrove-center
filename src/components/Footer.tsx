@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
             <div className="pt-2">
               <span className="inline-block bg-[#2b3038] text-xs px-3 py-1.5 rounded-full text-brand-orange font-medium">
-                보건복지부·여성가족부 공인 1급 전문가 직접 상담
+                보건복지부 임상심리사 1급 · 보건복지부 사회복지사 1급 · 여성가족부 청소년상담사 2급
               </span>
             </div>
           </div>
