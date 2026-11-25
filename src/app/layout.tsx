@@ -146,6 +146,17 @@ if(window.wcs) {
 `,
           }}
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNHJ7FM4EC" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VNHJ7FM4EC');
+`,
+          }}
+        />
       </body>
     </html>
   );
