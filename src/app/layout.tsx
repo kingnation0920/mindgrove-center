@@ -140,7 +140,7 @@ export default function RootLayout({
             __html: `
 if(!wcs_add) var wcs_add = {};
 wcs_add["wa"] = "174e9dce44d5bd0";
-if(window.wcs) {
+if(window.wcs && (location.hostname === "mindgrove.kr" || location.hostname === "www.mindgrove.kr")) {
   wcs_do();
 }
 `,
@@ -150,10 +150,12 @@ if(window.wcs) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-VNHJ7FM4EC');
+if (location.hostname === "mindgrove.kr" || location.hostname === "www.mindgrove.kr") {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VNHJ7FM4EC');
+}
 `,
           }}
         />
